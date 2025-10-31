@@ -210,20 +210,95 @@
     
 # print(nonrepeating(arr))
 
+#find all symmetric pairs in an array -------------------
+
+# def find_symmetric(pairs):
+#     seen={}
+#     symmetric=[]
+#     for (a,b) in pairs:
+#         if (b,a) in seen:
+#             symmetric.append((a,b))
+#         else:
+#             seen[(a,b)]=True  #add a,b in seen
+#     return symmetric
 
 
+# pairs=[(1, 2), (2, 1), (3, 4), (4, 5), (5, 4)]
+# print(find_symmetric(pairs))
 
 
+# Maximum Product Subarray in an Array----------------------
+# def maxProduct(nums):
+#     # Initialize variables
+#     max_prod = nums[0]
+#     min_prod = nums[0]
+#     result = nums[0]
+    
+#     # Traverse from 1st index
+#     for i in range(1, len(nums)):
+#         # If current number is negative, swap max and min
+#         if nums[i] < 0:
+#             max_prod, min_prod = min_prod, max_prod
+        
+#         # Update max and min products
+#         max_prod = max(nums[i], max_prod * nums[i])
+#         min_prod = min(nums[i], min_prod * nums[i])
+        
+#         # Update final result
+#         result = max(result, max_prod)
+    
+#     return result
+
+# # Example 1
+# nums1 = [1, 2, 3, 4, 5, 0]
+# print(maxProduct(nums1))  # Output: 120
+
+# # Example 2
+# nums2 = [1, 2, -3, 0, -4, -5]
+# print(maxProduct(nums2))  # Output: 20
 
 
+#Replace elements by its rank in the array--------------------
 
+# def rank(arr):
+#     sorted_arr=sorted(arr)
+#     rank_dict={}
+#     rank=1
 
+#     for num in sorted_arr:
+#         if num not in rank_dict:
+#             rank_dict[num]=rank
+#             rank=rank+1
+#     #replace elements in original array with rank
+#     ans=[]
+#     for num in arr:
+#         ans.append(rank_dict[num])
+#     return ans
 
+         
+# arr=[20, 15, 26, 2 ,98, 6]
+# print(rank(arr))
 
+#Sort Elements of an Array by Frequency----------
+# def sortFreq(arr):
+#     freq={}
+#     visit=[]
+   
+#     for el in arr:
+#         if el not in visit:
+#             freq[el]=1
+#             visit.append(el)
+#         else:
+#             freq[el]=freq[el]+1
 
+#     sorted_freq = dict(sorted(freq.items(), key=lambda x: x[1], reverse=True))
 
+# # freq.items()	Turns dictionary into list of (key, value) pairs
+# # lambda x: x[1]	Sort using the value (frequency)
+# # reverse=True	Sort from high to low
+# # dict(...)	Converts sorted list back into a dictionary
+    
+#     return freq
 
-
-
-
-
+# arr=[1,2,3,2,4,3,1,2]
+# print(sortFreq(arr))
