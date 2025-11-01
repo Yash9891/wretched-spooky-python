@@ -302,3 +302,65 @@
 
 # arr=[1,2,3,2,4,3,1,2]
 # print(sortFreq(arr))
+
+
+# Rotate arrayby k elements-------------------------
+# arr=[1,2,3,4,5,6,7]
+# def rotate(arr, k):
+#     n=len(arr)
+#     k=k%n
+#     return arr[-k:]+arr[:-k]
+
+# k=3
+# print(rotate(arr, k))
+
+
+#An equilibrium index in an array is a position where the sum of all elements to its left is equal to the sum of all elements to its right.------------
+
+# def equilibrium(arr):
+#     total_sum=sum(arr)
+#     left_sum=0
+#     for i in range(len(arr)):
+#         if left_sum==total_sum-arr[i]-left_sum:
+#             return i
+#         left_sum+=arr[i]
+#     return -1
+            
+
+# arr=[2, 3, -1, 8, 4]
+# print(equilibrium(arr))
+
+
+#Linear Search-------------------
+# arr=[1,2,3,5,2,2,1]
+# key=3
+# def search(arr, key):
+#     for i in range(len(arr)):
+#         if arr[i]==key:
+#             return i
+#     return -1
+        
+# print(search(arr, key))
+
+#Check if array is subset of another array------------------
+# def subset(arr1, arr2):
+    
+#     if len(arr2)>len(arr1) or len(arr2)==0:
+#         return False
+#     for el in arr2:
+#         if el not in arr1:
+#             return False
+#     return True
+    
+       
+# arr1= [1,3,4,5,2]
+# arr2= [2,3]
+
+# if subset(arr1, arr2):
+#     print("arr2 is subset of arr 1")
+# else:
+#     print("arr2 is not subset of arr1")
+
+    
+
+  
