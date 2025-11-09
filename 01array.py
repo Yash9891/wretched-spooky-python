@@ -361,6 +361,4 @@
 # else:
 #     print("arr2 is not subset of arr1")
 
-    
-
-  
+ 
