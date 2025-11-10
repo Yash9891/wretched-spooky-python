@@ -329,7 +329,18 @@ if automorphic(num):
     print("Automorphic Num")
 else:
     print("Not automorphic num")
+
+
+#Find GCD of two numbers-----------------------------------
+
+def gcd(a, b):
+    while b!=0:
+        a,b= b, a%b
+    return a
     
+a=26
+b=12
+print(gcd(a,b))
 
 
     
