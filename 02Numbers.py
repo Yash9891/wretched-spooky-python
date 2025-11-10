@@ -343,6 +343,23 @@ b=12
 print(gcd(a,b))
 
 
+# lcm-----------------------------------------------
+
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    return (a * b) // gcd(a, b)
+
+# Example usage
+a = 8
+b = 4
+
+print("LCM of", a, "and", b, "is:", lcm(a, b))
+
+
     
 
     
