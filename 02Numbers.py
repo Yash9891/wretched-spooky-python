@@ -462,6 +462,13 @@ def twoPrime(num):
 print(twoPrime(74))
 
 
+#Calculate the Area of the Circle--------------------------
+
+def areaCircle(radius):
+    pi=3.14
+    return pi*radius*radius
+print(areaCircle(2))
+
     
 
     
