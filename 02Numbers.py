@@ -292,3 +292,28 @@
 #             prime_fact.append(i)
 #     return prime_fact
 # print(primFactors(52))
+
+#Check if a number is a Strong Number or not----------------
+#perfect num= 145=1!+4!+5!
+
+# def fact(x):
+#     if x==0 or x==1:
+#         return 1
+#     return x*fact(x-1)
+# def strongNum(num):
+#     temp=num
+#     sum=0
+#     while num>0:
+#         digit=num%10
+#         sum=sum+fact(digit)
+#         num=num//10
+#     return sum==temp
+    
+# num=26
+# if strongNum(num):
+#     print("Strong Num")
+# else:
+#     print("Not strong")
+    
+
+    
