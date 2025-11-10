@@ -314,6 +314,24 @@
 #     print("Strong Num")
 # else:
 #     print("Not strong")
+
+#Check if a number is Automorphic Number--------------
+#Input Format: N = 76
+#Result: Automorphic Number
+#Explanation: Calculating 76 * 76 gives 5776, it ends with the given number
+
+def automorphic(num):
+    square = num * num
+    return str(square).endswith(str(num))
+
+num=76
+if automorphic(num):
+    print("Automorphic Num")
+else:
+    print("Not automorphic num")
+    
+
+
     
 
     
