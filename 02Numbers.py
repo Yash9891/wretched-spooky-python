@@ -405,6 +405,17 @@ def sumDigit(num):
 print(sumDigit(1234))
 
 
+#Find the sum of numbers in the given range-------------------------------
+def SumNums(a,b):
+    sum=0
+    for i in range(a,b+1):
+        sum=sum+i
+    return sum
+    
+print(SumNums(2,4))
+
+
+
 
     
 
