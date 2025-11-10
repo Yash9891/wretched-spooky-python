@@ -441,6 +441,27 @@ def replaceZero(num):
     return int(str(num).replace("0","1"))
 print(replaceZero(10900342350))
 
+
+#To express a given number as the sum of two prime numbers--------------------------
+#74 can be expressed as 71 + 3 and both are prime numbers. 
+def isPrime(x):
+    if x < 2:
+        return False
+    for i in range(2, int(x**0.5) + 1):  # More efficient check
+        if x % i == 0:
+            return False
+    return True
+
+def twoPrime(num):
+    for i in range(2, num // 2 + 1): 
+        if isPrime(i) and isPrime(num - i):
+            print(f"{num} = {i} + {num - i}")
+            return True
+    return False
+
+print(twoPrime(74))
+
+
     
 
     
