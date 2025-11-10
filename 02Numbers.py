@@ -415,6 +415,27 @@ def SumNums(a,b):
 print(SumNums(2,4))
 
 
+import math
+
+def add_fractions(n1, d1, n2, d2):
+    # Find Least Common Denominator
+    lcm = (d1 * d2) // math.gcd(d1, d2)
+    
+    # Convert fractions to have the same denominator
+    n1 = n1 * (lcm // d1)
+    n2 = n2 * (lcm // d2)
+    
+    # Add numerators
+    numerator = n1 + n2
+    denominator = lcm
+    
+    return numerator, denominator
+
+# Example usage
+result = add_fractions(3, 4, 1, 7)
+print("Numerator =", result[0], "Denominator =", result[1])
+
+
 
 
     
