@@ -394,6 +394,17 @@ def abundant(num):
 print(abundant(18))
 
 
+#sum Of Digits of A Number-------------------------------
+def sumDigit(num):
+    sum=0
+    while num>0:
+        digit=num%10
+        sum=sum+digit
+        num//=10
+    return sum
+print(sumDigit(1234))
+
+
 
     
 
