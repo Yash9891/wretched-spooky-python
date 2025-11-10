@@ -360,6 +360,24 @@ b = 4
 print("LCM of", a, "and", b, "is:", lcm(a, b))
 
 
+#Check if the given number is Harshad(Or Niven) Number-------------------------------------
+#3+7+8=18. 378 is divisible by 18. Therefore 378 is a harshad number.
+
+def harshadNum(num):
+    temp=num
+    sum=0
+    while temp>0:
+        digit=temp%10
+        sum=sum+digit
+        temp=temp//10
+        
+    return num%sum==0
+num=378
+if harshadNum(num):
+    print("Harshad num")
+else:
+    print("Not harshad num")
+
     
 
     
