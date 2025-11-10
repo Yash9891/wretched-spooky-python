@@ -378,6 +378,23 @@ if harshadNum(num):
 else:
     print("Not harshad num")
 
+
+#Check if the number is an abundant number or not-----------------------
+#Divisors of 18 are 1,2,3,6,9. 1+2+3+6+9=21, Since 21 is greater than 18, 18 is an abundant number.
+
+def abundant(num):
+    sum=0
+    for i in range(1,num):
+        if num%i==0:
+            sum=sum+i
+    if sum>num:
+        return True
+    return False
+    
+print(abundant(18))
+
+
+
     
 
     
