@@ -436,7 +436,10 @@ result = add_fractions(3, 4, 1, 7)
 print("Numerator =", result[0], "Denominator =", result[1])
 
 
-
+#Replace all the 0’s with 1 in a given integer--------------------------
+def replaceZero(num):
+    return int(str(num).replace("0","1"))
+print(replaceZero(10900342350))
 
     
 
