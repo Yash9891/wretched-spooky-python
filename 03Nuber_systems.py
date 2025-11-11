@@ -10,3 +10,22 @@ def binarytoDec(binary_num):
     return decimal
 
 print(binarytoDec(1011))  # Output: 11
+
+
+# Binary to decimal---------------
+# 11 ÷ 2 = 5 remainder 1
+#  5 ÷ 2 = 2 remainder 1
+#  2 ÷ 2 = 1 remainder 0
+#  1 ÷ 2 = 0 remainder 1
+
+
+def decimal_to_binary(n):
+    binary=""
+    while n>0:
+        remainder=n%2
+        binary=str(remainder)+binary
+        n=n//2
+    return binary if binary else "0"
+    
+    
+print(decimal_to_binary(11))  # Output: '10
