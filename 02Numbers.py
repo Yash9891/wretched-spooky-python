@@ -469,6 +469,12 @@ def areaCircle(radius):
     return pi*radius*radius
 print(areaCircle(2))
 
+# To find the number of permutations in which N people can occupy R seats----------------- P(n,r)=(n−r)!n!
+
+import math
+def permutations(n, r):
+    return math.factorial(n)//math.factorial(n-r)
+print(permutations(5,3))
     
 
     
