@@ -78,20 +78,53 @@
 #Insertion sort--------------------------------------------------
 #Insertion Sort is a simple and intuitive sorting algorithm that works the same way you arrange cards in your hand.
 
-def insertionSort(arr):
-    n=len(arr)
+# def insertionSort(arr):
+#     n=len(arr)
+#     for i in range(1, n):
+#         key=arr[i]   # element to be inserted
+#         j=i-1 #j=0
 
-    for i in range(1, n):
-        key=arr[i]   # element to be inserted
-        j=i-1
+#         # Move elements greater than key to one position ahead
+#         while j>=0 and arr[j]>key:
+#             arr[j+1]=arr[j]
+#             j=j-1 # j=0-1=>-1
+#         arr[j+1] = key #arr[-1+1]=[0]  # place the key in correct position
 
-        # Move elements greater than key to one position ahead
-        while j>=0 and arr[j]>key:
-            arr[j+1]=arr[j]
-            j=j-1
-        arr[j+1] = key   # place the key in correct position
-
-    return arr
+#     return arr
            
+# arr = [13, 46, 24, 52, 20, 9]
+# print(insertionSort(arr))
+
+
+
+
+#Merge sort- divide and conqure----------------------------------------
+
+def mergeSort(arr):
+    if len(arr)<=1:
+        return arr
+    mid=len(arr)//2
+    left=mergeSort(arr[:mid])
+    right=mergeSort(arr[mid:])
+    return merge(left,right)
+
+def merge(left, right):
+    result=[]
+    i=j=0
+
+    #merge 2 sorted array
+    while i<len(left) and j<len(right):
+        if left[i]<=right[j]:
+            result.append(left[i])
+            i=i+1
+        else:
+            result.append(right[j])
+            j=j+1
+    # add remaining element
+    result.extend(left[i:])
+    result.extend(right[j:])
+
+    return result
+
 arr = [13, 46, 24, 52, 20, 9]
-print(insertionSort(arr))
+print(mergeSort(arr))
